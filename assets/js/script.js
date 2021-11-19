@@ -19,8 +19,28 @@ function askQuestions() {
     alert('Password length must be a provided number');
     return null;
   }
+
+  var lowercase = confirm('Click OK to have lowercase letters in your password');
+
+  var uppercase = confirm('Click OK to have uppercase letters in your password');
+
+  var numbers = confirm('Click OK to have numbers letters in your password');
+
+  var specialChars = confirm('Click OK to have special characters letters in your password');
+
+  var options = {
+    length: length,
+    hasLowercase: lowercase,
+    hasUppercase: uppercase,
+    hasNumbers: numbers,
+    hasSpecials: specialChars,
+  }
+
+  console.log(options)
+  return options;
 }
-  
+
+
 // Get references to the #generate element
 var generateBtn = document.querySelector("#generate");
 
