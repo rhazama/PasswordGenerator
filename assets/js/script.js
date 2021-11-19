@@ -5,7 +5,21 @@ var numbers = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9'];
 var specials = ['!', '"', '#', '$', '%', '&', '`', '(', ')', '*', '+', ',', '-', '.', '/', ':', ';', '<', '=', '>', '?', '@', '[', '^', '_', '`', '{', '}', '~', '"'];
 // Create Question Function
   // Ask for length password
+function askQuestions() {
+  var length = parseInt(
+    prompt('How many characters would you like in your password?')
+  )
 
+  if(length<8 || length>128) {
+    alert('The password must be between 8 and 128 characters')
+    return null;
+  }
+
+  if(Number.isNaN(length)) {
+    alert('Password length must be a provided number');
+    return null;
+  }
+}
   
 // Get references to the #generate element
 var generateBtn = document.querySelector("#generate");
