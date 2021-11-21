@@ -1,9 +1,10 @@
-// Define Character variables
+// Defining Character variables
 var lowercase = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
 var uppercase = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'];
 var numbers = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9'];
 var specials = ['!', '"', '#', '$', '%', '&', '`', '(', ')', '*', '+', ',', '-', '.', '/', ':', ';', '<', '=', '>', '?', '@', '[', '^', '_', '`', '{', '}', '~', '"'];
-// Create Question Function
+
+//Question Function
   // Ask for length password
 function askQuestions() {
   var length = parseInt(
@@ -40,19 +41,50 @@ function askQuestions() {
   return options;
 }
 
-
-// Get references to the #generate element
-var generateBtn = document.querySelector("#generate");
-
-// Write password to the #password input
-function writePassword() {
-  var password = generatePassword();
-  var passwordText = document.querySelector("#password");
-
-  passwordText.value = password;
-
+// random list function
+function getRandom(arr) {
+  var randomNum = Math.floor(Math.random() * arr.length);
+  var randomChar = arr[randomNum]
+  return randomChar;
 }
 
-// Add event listener to generate button
-generateBtn.addEventListener("click", writePassword);
+//generating password function
+function generatePassword() {
+  var options = askQuestions();
+  var result = [];
+  var characterChoices = [];
+  var guaranteedChoices = [];
 
+  if(options.hasLowercase) {
+    characterChoices = characterChoices.concat(lowercase);
+    guaranteedChoices.push(getRandom(lowercase))
+  }
+
+  if(options.hasUppercase) {
+    characterChoices = characterChoices.concat(uppercase);
+    guaranteedChoices.push(getRandom(uppercase))
+  }
+
+  if(options.hasNumbers) {
+    characterChoices = characterChoices.concat(numbers);
+    guaranteedChoices.push(getRandom(numbers))
+  }
+
+  if(options.hasSpecials) {
+    characterChoices = characterChoices.concat(specials);
+    guaranteedChoices.push(getRandom(specials))
+  }
+
+  for(var i= 0; i < options.length; i++) {
+  var selectedChar = getRandom(characterChoices)
+  result.push(selectorChar);
+  }
+
+  for(var i = 0; i< guaranteedChoices.length; i++) {
+  result[i] = guarunteeddChoices[i];
+  }
+
+  console.log(result)
+
+  return result.join('')
+}
