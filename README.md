@@ -3,6 +3,8 @@
 ![badge](https://img.shields.io/badge/license-MIT-brightgreen)<br />
 ## Description
 A web application that helps users generate a password. Users can adjust their password settings by the amount of characters, upper and lower case letters, numbers, and special characters.
+</br>
+You can checkout the application through the following link: https://rhazama.github.io/passwordGenerator-rh/
 
 ## Table of Contents
 - [Description](#description)
@@ -13,10 +15,9 @@ A web application that helps users generate a password. Users can adjust their p
 - [Tests](#tests)
 - [Questions](#questions)
 ## Installation
-n/a
+You can access the application by clicking the link in the description!
+
 ## Usage
-You can checkout the application through the following link: https://rhazama.github.io/passwordGenerator-rh/
-</br>
 For users looking to create a new password.
 
 ## License
