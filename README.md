@@ -6,7 +6,8 @@
 
 ## Description
 A web application that helps users generate a password. Users can adjust their password settings by the amount of characters, upper and lower case letters, numbers, and special characters.
-</br>
+<br />
+<br />
 You can checkout the application through the following link: https://rhazama.github.io/passwordGenerator-rh/
 
 ## Table of Contents
